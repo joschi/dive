@@ -17,10 +17,10 @@ require (
 	github.com/phayes/permbits v0.0.0-20190612203442-39d7c581d2ee
 	github.com/sergi/go-diff v1.3.1
 	github.com/sirupsen/logrus v1.4.2
-	github.com/spf13/afero v1.2.2
+	github.com/spf13/afero v1.11.0
 	github.com/spf13/cobra v0.0.7
 	github.com/spf13/viper v1.4.0
-	golang.org/x/net v0.17.0
+	golang.org/x/net v0.19.0
 )
 
 require (
@@ -52,8 +52,8 @@ require (
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	golang.org/x/sys v0.25.0 // indirect
-	golang.org/x/term v0.13.0 // indirect
-	golang.org/x/text v0.13.0 // indirect
+	golang.org/x/term v0.15.0 // indirect
+	golang.org/x/text v0.14.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gotest.tools v2.2.0+incompatible // indirect
 	gotest.tools/v3 v3.5.0 // indirect
