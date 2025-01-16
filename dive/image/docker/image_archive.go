@@ -14,6 +14,7 @@ import (
 
 	"github.com/joschi/dive/dive/filetree"
 	"github.com/joschi/dive/dive/image"
+	"github.com/klauspost/compress/zstd"
 )
 
 type ImageArchive struct {
@@ -107,6 +108,13 @@ func NewImageArchive(tarFile io.ReadCloser) (*ImageArchive, error) {
 				if err != nil {
 					// Not a gzipped entry
 					unwrappedReader = io.MultiReader(bytes.NewReader(buffer[:n]), tarReader)
+
+					// Try reading a ZSTD
+					unwrappedReader, err = zstd.NewReader(unwrappedReader)
+					if err != nil {
+						// Not a zstd entry
+						unwrappedReader = io.MultiReader(bytes.NewReader(buffer[:n]), tarReader)
+					}
 				}
 
 				// Try reading a TAR
