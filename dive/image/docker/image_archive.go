@@ -12,9 +12,10 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/klauspost/compress/zstd"
+
 	"github.com/joschi/dive/dive/filetree"
 	"github.com/joschi/dive/dive/image"
-	"github.com/klauspost/compress/zstd"
 )
 
 type ImageArchive struct {
