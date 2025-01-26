@@ -260,12 +260,10 @@ ci-test-linux-run: generate-compressed-test-images
 	chmod 755 $(SNAPSHOT_DIR)/dive_linux_amd64_v1/dive && \
 	$(SNAPSHOT_DIR)/dive_linux_amd64_v1/dive '${TEST_IMAGE}' --ci && \
 	$(SNAPSHOT_DIR)/dive_linux_amd64_v1/dive --source docker-archive .data/test-kaniko-image.tar --ci --ci-config .data/.dive-ci
-	for alg in uncompressed gzip estargz zstd; \
-	do \
-		for exporter in docker image; \
-		do \
-			$(SNAPSHOT_DIR)/dive_linux_amd64_v1/dive "test-dive-$${exporter}:$${alg}" --ci && \
-		done; \
+	for alg in uncompressed gzip estargz zstd; do \
+		for exporter in docker image; do \
+			$(SNAPSHOT_DIR)/dive_linux_amd64_v1/dive "test-dive-$${exporter}:$${alg}" --ci ; \
+		done && \
 		$(SNAPSHOT_DIR)/dive_linux_amd64_v1/dive --source docker-archive .data/test-oci-$${alg}-image.tar --ci --ci-config .data/.dive-ci; \
 	done
 
