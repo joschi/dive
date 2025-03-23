@@ -1,3 +1,11 @@
+# Please check [wagoodman/dive](https://github.com/wagoodman/dive) for the latest version
+
+This fork has fulfilled its purpose in filling the gap between two versions of [wagoodman/dive](https://github.com/wagoodman/dive) and has been re-integrated with the upstream repository.
+
+This being said, this fork will be archived to preserve the artifacts for anyone currently using them.
+
+---
+
 # dive
 [![GitHub release](https://img.shields.io/github/release/joschi/dive.svg)](https://github.com/joschi/dive/releases/latest)
 [![Validations](https://github.com/joschi/dive/actions/workflows/validations.yaml/badge.svg)](https://github.com/joschi/dive/actions/workflows/validations.yaml)
